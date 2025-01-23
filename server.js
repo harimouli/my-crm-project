@@ -11,10 +11,9 @@ const app = express();
 app.use(express.json());
 
 
-// Use the routes from the routes folder
 app.use('/api', routes);
 
-sequelize.sync()  // Sync database (Note: In production, use migrations)
+sequelize.sync()  
   .then(() => {
     app.listen(process.env.PORT || 3000, () => {
       console.log('Server is running...');
