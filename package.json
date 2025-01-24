@@ -11,13 +11,14 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "better-sqlite3": "^8.7.0",
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "sequelize": "^6.37.5",
-    "sqlite3": "^5.1.7",
-    "better-sqlite3": "^8.5.1"
+    "sqlite3": "^5.1.7"
   },
   "engines": {
     "node": ">=16.0.0 <20.0.0"
