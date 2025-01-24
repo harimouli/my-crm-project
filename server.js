@@ -11,6 +11,9 @@ const app = express();
 app.use(express.json());
 
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the CRM API!');
+}); 
 app.use('/api', routes);
 
 sequelize.sync()  
