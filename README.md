@@ -36,10 +36,10 @@ Node.js and npm should be installed on your system.
           
   2.Create a .env file in the root of the project and add the following environment variables:
       
-              JWT_SECRET=your-jwt-secret-key
-              DB_NAME=your-database-name
+              DB_NAME=crm-database.db
+              JWT_SECRET=your_secret_key
               PORT=3000
-              Run the application:
+    
   3. Run the application:
             npm start
 
