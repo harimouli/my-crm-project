@@ -1,9 +1,10 @@
 const { Sequelize } = require('sequelize');
 const sqlite3 = require('sqlite3');
+const bettersqlite3 = require('better-sqlite3');
 require('dotenv').config();
 
 const sequelize = new Sequelize({
-  dialect: sqlite3,
+  dialect: bettersqlite3,
   storage: process.env.DB_NAME || 'crm-database.db',
   logging: false, // Disable logging for better performance
   define: {
