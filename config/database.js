@@ -1,9 +1,14 @@
 const { Sequelize } = require('sequelize');
+const sqlite = require('sqlite3');
 require('dotenv').config();
 
 const sequelize = new Sequelize({
-  dialect: 'sqlite', 
-  storage: process.env.DB_NAME || 'crm-database.db', 
+  dialect: sqlite.Database,
+  storage: process.env.DB_NAME || 'crm-database.db',
+  logging: false, // Disable logging for better performance
+  define: {
+    timestamps: false // Disable automatic timestamps for all models
+  }
 });
 
 sequelize.authenticate()
