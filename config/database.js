@@ -5,9 +5,9 @@ require('dotenv').config();
 const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: process.env.DB_NAME || 'crm-database.db',
-  logging: false, // Disable logging for better performance
+  logging: true, // Disable logging for better performance
   define: {
-    timestamps: false // Disable automatic timestamps for all models
+    timestamps: true // Disable automatic timestamps for all models
   }
 });
 

@@ -30,7 +30,7 @@ const Customer = sequelize.define('Customer', {
     allowNull: false,
   },
 }, {
-  timestamps:false,
+  timestamps:true,
 });
 
 Customer.belongsTo(User, { foreignKey: 'userId' });
